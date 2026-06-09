@@ -1,0 +1,57 @@
+When requirements are vague and constantly changing, it leads to scope creep, confusion, and wasted effort. 
+To handle this situation effectively, the team must follow a structured requirement engineering process.
+
+Steps to Gather and Document Clear Requirements:
+
+1. Stakeholder Interviews:
+Conduct detailed meetings with all stakeholders (sales team, managers, end-users).
+Ask specific questions to understand their needs such as:
+- What tasks should the CRM perform?
+- What problems are they currently facing?
+
+2. Requirement Elicitation Techniques:
+Use techniques like:
+- Questionnaires
+- Brainstorming sessions
+- Workshops
+- Observation of current systems
+This helps in extracting hidden and unclear requirements.
+
+3. Create User Stories:
+Convert requirements into simple user stories.
+Example:
+"As a sales manager, I want to track customer interactions so that I can improve sales."
+
+4. Prototyping:
+Develop wireframes or mockups of the system.
+This helps the client visualize the system and provide early feedback.
+
+5. Prioritization:
+Divide requirements into:
+- Must-have (core features like contact management, lead tracking)
+- Nice-to-have (advanced analytics, automation)
+This helps in managing scope and delivering important features first.
+
+6. Requirement Documentation (SRS):
+Prepare a Software Requirements Specification (SRS) document including:
+- Functional Requirements:
+  Features like contact management, sales tracking, reporting.
+- Non-Functional Requirements:
+  Performance, scalability, security, usability.
+- Constraints:
+  Budget, timeline, technology stack.
+- Acceptance Criteria:
+  Define how each feature will be tested and validated.
+
+7. Change Management:
+Establish a formal process for handling changes.
+Any new requirement should be reviewed, approved, and documented before implementation.
+
+8. Continuous Feedback (Agile Approach):
+Use Agile methodology with short iterations (sprints).
+Regularly demonstrate progress to the client and gather feedback.
+
+Conclusion:
+By using structured requirement gathering techniques, proper documentation (SRS), prioritization, and Agile practices, 
+the team can convert vague requirements into clear, actionable tasks. 
+This reduces scope creep, improves communication, and ensures successful project delivery.

@@ -1,0 +1,199 @@
+<!-- Survey for the improvement of the website
+Problem Description -> A Create a survey form for the improvement of a website.
+Tasks:
+• The detail of the customer needs to be input like Name, Email and Age.
+• Then add a drop down for the profession.
+• A radio button for the feedback of the webpage with options
+• Add a drop down for the content you like the most with an inbuilt option drop down menu
+• Multiple option selection checkbox is to be added for the improvements in the future. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #44a2ff, #32ffa3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: animate 2s alternate infinite;
+        }
+
+        @keyframes animate {
+            0% {
+                background: linear-gradient(0deg, #bc7ce7, #fc9292, #e7c692);
+            }
+            25% {
+                background: linear-gradient(120deg, #bc7ce7, #fc9292, #e7c692);
+            }
+            50% {
+                background: linear-gradient(240deg, #bc7ce7, #fc9292, #e7c692);
+            }
+            100% {
+                background: linear-gradient(360deg, #bc7ce7, #fc9292, #e7c692);
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        .input,
+        select {
+            height: 40px;
+            padding: 0 12px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            transition: 0.3s;
+        }
+
+        .input:focus,
+        select:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        .options {
+            margin-top: 8px;
+            line-height: 28px;
+            color: #555;
+        }
+
+        .options input {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        button {
+            margin-top: 25px;
+            height: 45px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Website Improvement Survey</h1>
+
+        <form>
+            <label for="name">Full Name</label>
+            <input class="input" type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email Address</label>
+            <input class="input" type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="age">Age</label>
+            <input class="input" type="number" id="age" min="10" max="100" required>
+
+            <label for="profession">Profession</label>
+            <select id="profession" required>
+                <option value="">-- Select Profession --</option>
+                <option>Student</option>
+                <option>Employee</option>
+                <option>Business Owner</option>
+                <option>Freelancer</option>
+                <option>Others</option>
+            </select>
+
+            <label>How do you rate our website?</label>
+            <div class="options">
+                <input type="radio" name="feedback" required> Excellent <br>
+                <input type="radio" name="feedback"> Good <br>
+                <input type="radio" name="feedback"> Average <br>
+                <input type="radio" name="feedback"> Poor
+            </div>
+
+            <label for="content">Which content do you like most?</label>
+            <select id="content">
+                <optgroup label="Shopping">
+                    <option>Men's Wear</option>
+                    <option>Women's Wear</option>
+                    <option>Kids Wear</option>
+                </optgroup>
+
+                <optgroup label="Services">
+                    <option>Customer Support</option>
+                    <option>Fast Delivery</option>
+                    <option>Easy Returns</option>
+                </optgroup>
+
+                <optgroup label="Features">
+                    <option>Offers & Discounts</option>
+                    <option>Mobile App</option>
+                    <option>Wishlist</option>
+                </optgroup>
+            </select>
+
+            <label>What should we improve?</label>
+            <div class="options">
+                <input type="checkbox"> Website Speed <br>
+                <input type="checkbox"> Design Layout <br>
+                <input type="checkbox"> Product Quality <br>
+                <input type="checkbox"> Customer Support <br>
+                <input type="checkbox"> Payment Options
+            </div>
+
+            <button type="submit">Submit Survey</button>
+        </form>
+    </div>
+</body>
+
+</html>

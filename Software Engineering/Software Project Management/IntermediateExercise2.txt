@@ -1,0 +1,47 @@
+Given:
+Optimistic (O) = 4
+Most Likely (M) = 6
+Pessimistic (P) = 10
+
+PERT Formula:
+Expected Time (TE) = (O + 4M + P) / 6
+
+Calculation:
+TE = (4 + 4×6 + 10) / 6
+TE = (4 + 24 + 10) / 6
+TE = 38 / 6 = 6.33 days (approx)
+
+------------------------------------------------------------
+
+How PERT helps:
+
+1. Handles Uncertainty:
+PERT considers three estimates (O, M, P), making it more realistic.
+
+2. Better Planning:
+Gives an expected average time instead of a single fixed value.
+
+3. Risk Analysis:
+Helps identify tasks with high uncertainty.
+
+------------------------------------------------------------
+
+Where PERT is Suitable:
+
+PERT is more suitable for New Product Development projects.
+
+Reason:
+- New projects have uncertainty
+- Time estimation is difficult
+- No past data available
+
+In maintenance projects:
+- Work is predictable
+- Less uncertainty
+- Fixed estimates are easier
+
+------------------------------------------------------------
+
+Conclusion:
+
+PERT provides a more accurate and flexible way to estimate time in uncertain projects, especially in new development scenarios.

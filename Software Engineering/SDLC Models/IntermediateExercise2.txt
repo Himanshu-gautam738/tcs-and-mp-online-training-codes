@@ -1,0 +1,33 @@
+In this scenario, the client is unsure about the UI/UX design and wants to experiment with multiple options.
+The most suitable software process model is the Agile Model (with Prototyping approach).
+
+Justification:
+
+1. Frequent Changes:
+Agile supports continuous changes and improvements based on client feedback.
+UI/UX can be modified in each iteration.
+
+2. Prototyping:
+Multiple prototypes (mockups) can be created for product pages, checkout flow, and navigation.
+The client can review and select the best design.
+
+3. Iterative Development:
+The system is developed in small increments (sprints).
+Each version improves based on feedback.
+
+4. User Feedback:
+Agile encourages regular interaction with the client and end-users.
+Design decisions are based on real feedback.
+
+5. Faster Delivery:
+Working UI versions can be delivered quickly for testing and validation.
+
+Example:
+In an e-commerce application:
+- First sprint: basic product page design
+- Second sprint: improved UI with better navigation
+- Third sprint: optimized checkout process
+
+Conclusion:
+Agile with prototyping is ideal for projects where requirements are unclear and design needs continuous refinement.
+It ensures flexibility, better user experience, and higher client satisfaction.

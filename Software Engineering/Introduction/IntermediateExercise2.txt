@@ -1,0 +1,44 @@
+In this scenario, the client is satisfied with the functionality but wants better performance.
+This type of maintenance is called Perfective Maintenance.
+
+Types of Software Maintenance:
+1. Corrective Maintenance – fixing bugs
+2. Adaptive Maintenance – adapting to environment changes
+3. Perfective Maintenance – improving performance and efficiency ✔
+4. Preventive Maintenance – avoiding future issues
+
+Steps to improve performance:
+
+1. Problem Identification:
+Analyze user complaints and identify slow areas such as response time or loading time.
+
+2. Performance Monitoring:
+Use tools like profilers and logs to monitor CPU, memory, and system performance.
+
+3. Code Optimization:
+Improve inefficient code, remove unnecessary operations, and use better algorithms.
+
+4. Database Optimization:
+Optimize queries and use indexing to improve database performance.
+
+5. Caching:
+Store frequently used data in cache to reduce processing time.
+
+6. Load Testing:
+Test the system under heavy load to identify performance bottlenecks.
+
+7. Server Optimization:
+Use scaling (vertical/horizontal) and content delivery networks (CDN) if needed.
+
+Diagnosis Methods:
+- Log analysis
+- Monitoring tools
+- Performance testing
+
+Resolution:
+- Identify bottlenecks
+- Optimize code, database, and infrastructure
+
+Conclusion:
+Performance issues can be resolved through systematic analysis and optimization.
+Perfective maintenance improves system efficiency and enhances user experience.

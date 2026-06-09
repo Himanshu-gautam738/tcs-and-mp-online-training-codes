@@ -1,0 +1,108 @@
+<!-- Styled Navigation Menu -> Design a horizontal navigation menu with CSS styling. Exercise: Create a menu with 4 links that:
+• Uses unordered list
+• Displays horizontally
+• Changes color on hover
+Outcome:
+• Learns CSS positioning (`float`)
+• Implements interactive hover effects
+• Practices semantic HTML5 (`<nav>`) -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modern Navigation Menu</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #88b4e0;
+        }
+
+        /* Remove default list style */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Horizontal menu using float */
+        nav ul li {
+            float: left;
+            position: relative;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* Hover effect */
+        nav ul li:hover > a {
+            background-color: #3498db;
+        }
+
+        /* Active page highlight */
+        .active {
+            background-color: #04AA6D;
+        }
+
+        /* Dropdown menu (hidden by default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #34495e;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        /* Dropdown links */
+        .dropdown-content a {
+            padding: 12px 16px;
+            display: block;
+        }
+
+        /* Show dropdown on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hover effect for dropdown */
+        .dropdown-content a:hover {
+            background-color: #1abc9c;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+                <a href="#">Services</a>
+                <div class="dropdown-content">
+                    <a href="#">Web Development</a>
+                    <a href="#">App Development</a>
+                    <a href="#">Database Design</a>
+                </div>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

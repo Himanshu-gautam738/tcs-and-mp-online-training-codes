@@ -1,0 +1,34 @@
+Given Activities:
+A = 4 days
+B = 5 days (after A)
+C = 3 days (after A)
+D = 6 days (after B and C)
+
+1. Network Diagram (Text Form):
+
+Start → A → B → D → End
+        ↘ C ↗
+
+2. Possible Paths:
+
+Path 1: A → B → D
+Path 2: A → C → D
+
+3. Duration of Each Path:
+
+Path 1: A + B + D = 4 + 5 + 6 = 15 days
+Path 2: A + C + D = 4 + 3 + 6 = 13 days
+
+4. Critical Path:
+
+Critical Path = A → B → D
+
+5. Total Project Duration:
+
+15 days
+
+6. Justification:
+
+The critical path is the longest path in the network.
+Any delay in this path will directly delay the entire project.
+Since Path 1 has the maximum duration (15 days), it is the critical path.

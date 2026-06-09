@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f4f4f4;
+        }
+
+        #timer {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Countdown Timer</h1>
+    <div id="timer">10:00</div>
+
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+
+    <script>
+        let totalSeconds = 600; // 10 minutes
+        let interval = null;
+        const timerDisplay = document.getElementById('timer');
+
+        function updateDisplay() {
+            const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            timerDisplay.textContent = `${minutes}:${seconds}`;
+        }
+
+        document.getElementById('start').addEventListener('click', () => {
+            if (interval) return; // prevent multiple intervals
+            interval = setInterval(() => {
+                if (totalSeconds <= 0) {
+                    clearInterval(interval);
+                    interval = null;
+                    alert("Time's up!");
+                    return;
+                }
+                totalSeconds--;
+                updateDisplay();
+            }, 1000);
+        });
+
+        document.getElementById('pause').addEventListener('click', () => {
+            clearInterval(interval);
+            interval = null;
+        });
+
+        document.getElementById('reset').addEventListener('click', () => {
+            clearInterval(interval);
+            interval = null;
+            totalSeconds = 600;
+            updateDisplay();
+        });
+
+        updateDisplay();
+    </script>
+</body>
+
+</html>

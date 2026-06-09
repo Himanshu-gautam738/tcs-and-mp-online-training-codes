@@ -1,0 +1,35 @@
+Requirement gathering is the most important initial phase of the Software Development Life Cycle (SDLC). 
+If this phase is not performed properly, several problems can arise throughout the development process.
+
+1. Impact on Design:
+Without clear requirements, it becomes difficult to design the system architecture.
+The design may be incomplete, incorrect, or not aligned with user needs.
+
+2. Impact on Development:
+Developers may not clearly understand what needs to be built.
+This can lead to incorrect implementation, missing features, and frequent code changes (rework).
+
+3. Impact on Testing:
+Testing team will not have clear expected outcomes.
+Test cases may be incorrect or incomplete, leading to undetected bugs and poor software quality.
+
+4. Client Satisfaction:
+The final product may not meet client expectations.
+This leads to dissatisfaction, rejection of the product, or demand for major changes.
+
+5. Project Cost:
+Frequent changes and rework increase development and testing costs significantly.
+
+6. Time Delay:
+Unclear requirements cause confusion and repeated work, leading to project delays.
+
+Real-World Example:
+Consider a team developing an online food delivery application.
+Due to poor requirement gathering, important features like live tracking and online payment were not included.
+As a result:
+- The client was not satisfied
+- The system had to be redeveloped
+- Both time and cost increased significantly
+
+Conclusion:
+Proper requirement gathering is essential. Without it, the project becomes inefficient, costly, and risky.

@@ -1,0 +1,53 @@
+Given Data:
+
+Inputs = 15, Weight = 4
+Outputs = 10, Weight = 5
+Inquiries = 5, Weight = 4
+Internal Files = 7, Weight = 7
+External Interfaces = 6, Weight = 5
+
+------------------------------------------------------------
+
+Step 1: Calculate Function Points for each component
+
+1. Inputs:
+FP = 15 × 4 = 60
+
+2. Outputs:
+FP = 10 × 5 = 50
+
+3. Inquiries:
+FP = 5 × 4 = 20
+
+4. Internal Files:
+FP = 7 × 7 = 49
+
+5. External Interfaces:
+FP = 6 × 5 = 30
+
+------------------------------------------------------------
+
+Step 2: Calculate Total UFPC
+
+UFPC = 60 + 50 + 20 + 49 + 30
+UFPC = 209
+
+------------------------------------------------------------
+
+Final Answer:
+
+Unadjusted Function Point Count (UFPC) = 209
+
+------------------------------------------------------------
+
+Explanation:
+
+Function Point Analysis is used to measure software size based on functionality.
+Each component (inputs, outputs, inquiries, files, interfaces) is multiplied by its weight.
+The sum of all these gives the UFPC.
+
+------------------------------------------------------------
+
+Conclusion:
+
+UFPC = 209 represents the total functional size of the system before applying any adjustment factors.

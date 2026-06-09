@@ -1,0 +1,60 @@
+In this scenario, the mobile fitness tracker app needs to evolve continuously based on user feedback and analytics.
+The most suitable SDLC model for this project is the Agile Model.
+
+1. Why Agile Model is Best:
+
+a) Continuous Updates:
+Agile supports continuous development and delivery in small iterations (sprints).
+New features can be added regularly based on user needs.
+
+b) User-Driven Development:
+Agile focuses on customer feedback.
+User suggestions and analytics can be incorporated into future releases.
+
+c) Flexibility:
+Requirements can change at any time, and Agile easily adapts to these changes.
+
+d) Faster Delivery:
+Working features are delivered quickly, allowing early usage and testing.
+
+------------------------------------------------------------
+
+2. How Agile Supports Rapid Iteration and Deployment:
+
+a) Iterative Development:
+The project is divided into small sprints (2–4 weeks).
+Each sprint delivers a working version of the app.
+
+Example:
+- Sprint 1: Basic step counter
+- Sprint 2: Add calorie tracking
+- Sprint 3: Add heart rate monitoring
+
+b) Continuous Feedback:
+After each sprint, users provide feedback.
+This feedback is used to improve the next version.
+
+c) Frequent Releases:
+Agile allows frequent app updates on platforms like Play Store/App Store.
+
+d) Continuous Integration & Deployment (CI/CD):
+Code changes are tested and deployed automatically, ensuring faster and reliable releases.
+
+e) Prioritization:
+Important features (like health tracking) are developed first, while less important features are added later.
+
+------------------------------------------------------------
+
+3. Benefits for Fitness App:
+
+- Improved user experience through continuous updates
+- Quick bug fixing and performance improvements
+- Ability to add new features like AI-based fitness suggestions
+- Better engagement due to regular updates
+
+------------------------------------------------------------
+
+Conclusion:
+
+Agile model is the best choice for a fitness tracker app because it supports flexibility, continuous improvement, 
+rapid iteration, and frequent deployment. It ensures that the app evolves according to user needs and market trends.

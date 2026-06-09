@@ -1,0 +1,33 @@
+In a complex system like a Hospital Management System, following a well-defined software process model is very important.
+
+Reasons:
+
+1. Clear Understanding of Requirements:
+The system includes multiple modules like patient records, billing, and emergency services.
+A process model ensures all requirements are properly gathered and understood.
+
+2. Better Planning and Organization:
+The process model helps in planning tasks, timelines, and resources efficiently.
+
+3. Reduced Errors:
+Without a proper process, coding directly may lead to mistakes and missing features.
+Structured phases help detect errors early.
+
+4. Improved Quality:
+Testing and validation are part of the process model, ensuring high-quality software.
+
+5. Handling Complexity:
+Hospital systems are complex and critical.
+A process model helps manage complexity through proper design and modularization.
+
+6. Risk Management:
+Potential risks are identified early and handled properly.
+
+7. Client Satisfaction:
+Regular feedback and proper development ensure the final product meets client expectations.
+
+Example:
+If coding starts directly without planning, important features like emergency handling or secure patient data may be missed, leading to system failure.
+
+Conclusion:
+A well-defined process model ensures systematic development, reduces risk, improves quality, and delivers reliable software.

@@ -1,0 +1,21 @@
+Process, Product, and Project are three important concepts in software engineering.
+
+1. Process:
+Process is a set of activities or steps followed to develop software.
+It includes planning, designing, coding, testing, and maintenance.
+Example: Agile, Waterfall model.
+
+2. Product:
+Product is the final software that is delivered to the user.
+It is the output of the process.
+Example: Mobile apps like WhatsApp, websites like Amazon.
+
+3. Project:
+Project is the complete effort to develop a software product within a specific time and budget.
+It includes resources, team, and schedule.
+Example: Developing a banking system within 6 months.
+
+Contribution in SDLC:
+- Process defines how work is done.
+- Product is the result of the work.
+- Project manages time, cost, and resources to complete the work.

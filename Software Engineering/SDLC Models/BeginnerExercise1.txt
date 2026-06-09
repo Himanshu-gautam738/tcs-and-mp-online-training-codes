@@ -1,0 +1,35 @@
+Software Development Life Cycle (SDLC) is a structured process used to develop high-quality software. 
+It consists of several phases, each contributing to building a reliable software product.
+
+1. Requirement Gathering and Analysis:
+In this phase, requirements are collected from clients and analyzed.
+Example: For an e-commerce app, requirements include login, product search, and payment.
+Contribution: Ensures the system is built according to user needs.
+
+2. System Design:
+The system architecture and design are created based on requirements.
+Example: Designing database structure, UI layout, and system modules.
+Contribution: Provides a clear blueprint for development.
+
+3. Implementation (Coding):
+Developers write code according to the design.
+Example: Writing code for login system or payment gateway.
+Contribution: Converts design into a working system.
+
+4. Testing:
+The software is tested to find and fix errors.
+Example: Checking if login works correctly or payment is secure.
+Contribution: Improves quality and removes bugs.
+
+5. Deployment:
+The software is released to users.
+Example: Launching a website or mobile application.
+Contribution: Makes the system available for real use.
+
+6. Maintenance:
+After deployment, the system is updated and improved.
+Example: Fixing bugs, adding new features.
+Contribution: Ensures long-term reliability and performance.
+
+Conclusion:
+Each phase plays a critical role. Together, they ensure that the software is reliable, efficient, and meets user requirements.

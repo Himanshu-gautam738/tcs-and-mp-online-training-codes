@@ -1,0 +1,170 @@
+<!-- Card Component with CSS Variables -> Create reusable card components using CSS custom properties. Exercise: Design a card with:
+• Consistent styling via CSS variables
+• Flexible content areas
+• Shadow effects
+Outcome:
+• Implements CSS variables
+• Creates maintainable component styles
+• Practices shadow effects -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Card Component</title>
+
+    <style>
+        /* CSS Variables (Custom Properties) */
+        :root {
+
+            --card-bg: #ffffff;
+            --primary-color: #2563eb;
+            --text-color: #333;
+            --secondary-text: #6b7280;
+            --radius: 12px;
+            --shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            --hover-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            --transition: 0.3s;
+        }
+
+        /* Body styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #eef2f7, #dbeafe);
+            padding: 40px;
+        }
+
+        /* Card container */
+        .card-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        /* Card design */
+        .card {
+
+            background: var(--card-bg);
+            width: 300px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+
+        }
+
+        /* Hover effect */
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--hover-shadow);
+        }
+
+        /* Card image */
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        /* Card content */
+        .card-content {
+            padding: 20px;
+        }
+
+        /* Card title */
+        .card-title {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Card description */
+        .card-description {
+            font-size: 14px;
+            color: var(--secondary-text);
+            margin-bottom: 20px;
+        }
+
+        /* Button */
+        .card-button {
+
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+
+        }
+
+        .card-button:hover {
+            background: #1e40af;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Professional Card Component</h2>
+    <div class="card-container">
+
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://media.istockphoto.com/id/2212508544/vector/laptop-on-desk-web-design-programming-software-development-education-webdesign.jpg?s=612x612&w=0&k=20&c=qvnUAwh42O7nDM0ls9klPWq682FOVweMiZKawrIUYGg=">
+            <div class="card-content">
+
+                <div class="card-title">
+                    Web Development
+                </div>
+
+                <div class="card-description">
+                    Learn modern web development using HTML, CSS, JavaScript, and frameworks.
+                </div>
+
+                <button class="card-button">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp095lJ5YRpFHcQy3w_Dy5HVErnOSNNSlE7g&s">
+            <div class="card-content">
+
+                <div class="card-title">
+                    Database Systems
+                </div>
+
+                <div class="card-description">
+                    Understand relational databases, SQL queries, and data management.
+                </div>
+
+                <button class="card-button">
+                    Learn More
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ19lkIi04aAtLX-CVnu7FhM8B30ljwmY1B7A&s">
+            <div class="card-content">
+                <div class="card-title">
+                    Cloud Computing
+                </div>
+
+                <div class="card-description">
+                    Explore cloud platforms, deployment, and scalable applications.
+                </div>
+
+                <button class="card-button">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

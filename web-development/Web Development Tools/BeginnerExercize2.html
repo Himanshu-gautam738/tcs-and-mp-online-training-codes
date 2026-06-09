@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chocolate Cake Recipe</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 20px;
+            background-color: #fff8e1;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        @media print {
+            body {
+                background-color: white;
+                color: black;
+            }
+
+            nav,
+            .no-print {
+                display: none;
+                /* Hide non-essential elements */
+            }
+
+            article {
+                box-shadow: none;
+                border: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Chocolate Cake Recipe</h1>
+        <p class="no-print">Print-friendly version available!</p>
+    </header>
+
+    <article>
+        <h2>Ingredients</h2>
+        <ul>
+            <li>1 cup flour</li>
+            <li>1/2 cup sugar</li>
+            <li>1/2 cup cocoa powder</li>
+            <li>1 tsp baking powder</li>
+            <li>2 eggs</li>
+            <li>1/2 cup milk</li>
+            <li>1/4 cup vegetable oil</li>
+        </ul>
+
+        <h2>Instructions</h2>
+        <ol>
+            <li>Preheat the oven to 180°C (350°F).</li>
+            <li>Mix flour, sugar, cocoa powder, and baking powder in a bowl.</li>
+            <li>Add eggs, milk, and oil. Mix until smooth.</li>
+            <li>Pour into a greased baking pan.</li>
+            <li>Bake for 30-35 minutes. Check with a toothpick.</li>
+            <li>Let it cool before serving.</li>
+        </ol>
+    </article>
+</body>
+
+</html>

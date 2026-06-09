@@ -1,0 +1,221 @@
+<!-- Form Validation - Validate a registration form before submission.
+• Check email format
+• Verify password strength
+• Prevent empty fields
+Outcome:
+• Form event handling
+• Basic validation logic -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Registration Form</title>
+    <style>
+        body
+        {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: linear-gradient(135deg, rgb(127, 249, 249), #bc65b2);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 380px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 95%;
+            padding: 12px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        input:focus {
+            outline: 1px solid rgb(3, 146, 212);
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .toggle {
+            position: absolute;
+            right: 10px;
+            top: 33%;
+            cursor: pointer;
+            font-size: 14px;
+            color: #2563eb;
+        }
+
+        .strength-bar {
+            margin-top: 10px;
+            height: 8px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .weak {
+            background: red;
+            width: 33%;
+        }
+
+        .medium {
+            background: orange;
+            width: 66%;
+        }
+
+        .strong {
+            background: green;
+            width: 100%;
+        }
+
+        .error {
+            color: red;
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 50%;
+            margin-left: 25%;
+            padding: 12px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-card">
+        <h2>Create Account</h2>
+
+        <form id="form">
+
+            <label>Name</label>
+            <input type="text" id="name">
+            <div class="error" id="nameError"></div>
+
+            <label>Email</label>
+            <input type="text" id="email">
+            <div class="error" id="emailError"></div>
+
+            <label>Password</label>
+
+            <div class="password-container">
+
+                <input type="password" id="password">
+
+                <span class="toggle" onclick="togglePassword()">
+                    Show
+                </span>
+
+            </div>
+
+            <div class="strength-bar" id="strengthBar"></div>
+
+            <div class="error" id="passwordError"></div>
+
+            <button type="submit">
+                Register
+            </button>
+
+        </form>
+
+        <div class="success" id="success"></div>
+
+    </div>
+
+    <script>
+        function togglePassword() {
+            const pass = document.getElementById("password");
+            if (pass.type === "password") {
+                pass.type = "text";
+            } else {
+                pass.type = "password";
+            }
+        }
+
+        document.getElementById("password")
+            .addEventListener("input", function () {
+                const pass = this.value;
+                const bar = document.getElementById("strengthBar");
+                if (pass.length < 4) {
+                    bar.className = "strength-bar weak";
+                }
+                else if (pass.length < 8) {
+                    bar.className = "strength-bar medium";
+                }
+                else {
+                    bar.className = "strength-bar strong";
+                }
+            });
+
+        document.getElementById("form")
+            .addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                let valid = true;
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const pass = document.getElementById("password").value.trim();
+
+                document.getElementById("nameError").innerHTML = "";
+                document.getElementById("emailError").innerHTML = "";
+                document.getElementById("passwordError").innerHTML = "";
+                document.getElementById("success").innerHTML = "";
+
+                /* NAME */
+                if (name === "") {
+                    document.getElementById("nameError").innerHTML = "Name required";
+                    valid = false;
+                }
+
+                /* EMAIL */
+                const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (!email.match(pattern)) {
+                    document.getElementById("emailError").innerHTML = "Invalid email";
+                    valid = false;
+                }
+
+                /* PASSWORD */
+                if (pass.length < 6) {
+                    document.getElementById("passwordError").innerHTML = "Password must be 6+ characters";
+                    valid = false;
+                }
+
+                if (valid) {
+                    document.getElementById("success").innerHTML = "Registration Successful!";
+                }
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!-- Parallax Scrolling Effect -> Implement a parallax scrolling section with layered backgrounds. Exercise: Create a webpage section where:
+• Background images scroll slower than content
+• Uses CSS `background-attachment`
+• Includes content overlay
+Outcome:
+• Masters parallax techniques
+• Understands advanced positioning
+• Creates immersive visual effects -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Multi-Layer Parallax</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="parallax-container">
+        <div class="parallax-group">
+            <div class="parallax-layer layer-back"></div>
+            <div class="parallax-layer layer-mid"></div>
+            <div class="parallax-layer layer-front"></div>
+            <div class="hero-content">
+                <h1>ADVANCED PARALLAX</h1>
+                <p>Multi-layer depth illusion using perspective</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>True Multi-Layer Parallax</h2>
+        <p>
+            This advanced implementation uses CSS perspective and translateZ to simulate
+            realistic depth. Each layer moves at a different speed relative to scroll,
+            creating immersive 3D illusion.
+            This technique is used in:
+            • Apple product pages
+            • Tesla landing pages
+            • Modern portfolio websites
+        </p>
+        <div class="card">
+            <h3>Floating Card Effect</h3>
+            <p>
+                This card appears to float above the surface using subtle depth transforms.
+            </p>
+        </div>
+    </div>
+
+    <div class="parallax-banner">
+        <div class="banner-text">
+            <h2>Immersive Experience</h2>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Performance Optimized</h2>
+        <p>
+            Unlike basic parallax, this approach uses GPU acceleration via translateZ
+            and perspective, ensuring smooth rendering and professional performance.
+        </p>
+    </div>
+</body>
+</html>

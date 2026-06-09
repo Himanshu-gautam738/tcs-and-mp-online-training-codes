@@ -1,0 +1,147 @@
+:root {
+    --primary: #2563eb;
+    --secondary: #0f172a;
+    --accent: #38bdf8;
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #334155;
+    --radius: 10px;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial;
+    background: var(--bg);
+    color: var(--text);
+}
+
+header {
+    background: var(--accent);
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.container {
+    width: 80%;
+    margin: 30px auto;
+}
+
+#blog-posts h2 {
+    color: var(--secondary);
+}
+
+article {
+    background: var(--card);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: 0.3s;
+}
+
+article:hover {
+    transform: translateY(-5px);
+}
+
+.post-title {
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.post-date {
+    font-size: 14px;
+    color: gray;
+}
+
+.post-author {
+    font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+}
+
+#comments {
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+#comments h2 {
+    color: var(--secondary);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: var(--radius);
+    border: 1px solid #cbd5e1;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+footer {
+    background: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: var(--accent);
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

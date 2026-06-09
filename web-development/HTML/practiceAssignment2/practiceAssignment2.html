@@ -1,0 +1,279 @@
+<!-- Blog Website -> Creating a blog website is a great way to share thoughts, experiences, and knowledge with the world. This case study outlines a structured approach for developing a simple blog website using HTML and CSS.
+Tasks
+Task 1: Blog Post Management (HTML & CSS Implementation): Create a section to display blog posts. Each blog post should contain:
+• Post Title (Heading)
+• Post Date (Paragraph)
+• Post Content (Paragraph)
+• Author Name (Paragraph)
+Operations to Implement:
+• Create HTML structure for blog posts.
+• Apply CSS styles to enhance appearance. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TechInsights Blog</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --accent: #38bdf8;
+            --bg: #f1f5f9;
+            --card: #ffffff;
+            --text: #334155;
+            --radius: 12px;
+            --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: var(--bg);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            background: linear-gradient(rgba(40, 52, 80, 0.85), rgba(40, 52, 80, 0.85)), url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+            background-size: cover;
+            color: white;
+            padding-bottom: 50px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+        }
+
+        .featured {
+            margin-top: 40px;
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+        }
+
+        .featured img {
+            width: 100%;
+            height: 800px;
+        }
+
+        .featured-content {
+            padding: 20px;
+        }
+
+        .blog-grid {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card img {
+            width: 100%;
+        }
+
+        .blog-content {
+            padding: 15px;
+        }
+
+        .categories {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .category-list {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .category {
+            background: var(--primary);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 20px;
+        }
+
+        .about {
+            margin-top: 40px;
+            background: var(--card);
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .comment-section {
+            margin-top: 40px;
+            background: var(--card);
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 15px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            border-radius: var(--radius);
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+        }
+
+        footer {
+            margin-top: 40px;
+            background: var(--secondary);
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        footer a {
+            color: var(--accent);
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">TechInsights</div>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Blog</a>
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+
+            <div class="hero">
+                <h1>TechInsights Blog</h1>
+                <p>Learn Web Development, Programming, and Technology</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- FEATURED POST -->
+        <section class="featured">
+            <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f">
+            <div class="featured-content">
+                <h2>Future of Web Development</h2>
+                <p>Modern technologies are transforming the web industry.</p>
+                <p><b>Author:</b> Rahul | March 2026</p>
+            </div>
+        </section>
+
+        <!-- BLOG GRID -->
+        <section class="blog-grid">
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
+                <div class="blog-content">
+                    <h3>Learn HTML & CSS</h3>
+                    <p>Build your foundation in web development.</p>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+                <div class="blog-content">
+                    <h3>JavaScript Guide</h3>
+                    <p>Understand modern JavaScript concepts.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="categories">
+            <h2>Categories</h2>
+            <div class="category-list">
+                <div class="category">WebDev</div>
+                <div class="category">ML</div>
+                <div class="category">Programming</div>
+                <div class="category">AI</div>
+                <div class="category">Cloud</div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about">
+            <h2>About This Blog</h2>
+            <p>This blog shares knowledge about programming and modern technologies.</p>
+        </section>
+
+        <!-- COMMENTS -->
+        <section class="comment-section">
+            <h2>Leave a Comment</h2>
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea placeholder="Your Comment"></textarea>
+            <button>Post Comment</button>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 TechInsights</p>
+        <p>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+        </p>
+    </footer>
+</body>
+</html>

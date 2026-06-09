@@ -1,0 +1,55 @@
+RACI Matrix is used to clearly define roles and responsibilities in a project.
+
+R = Responsible (does the work)
+A = Accountable (final decision / owner)
+C = Consulted (provides input)
+I = Informed (kept updated)
+
+------------------------------------------------------------
+
+RACI Matrix for Project:
+
+Activity              | Frontend | Backend | QA  | DevOps | PM
+------------------------------------------------------------
+Requirement Analysis  |    C     |    C    |  C  |   I    |  A
+System Design         |    R     |    R    |  C  |   C    |  A
+Development           |    R     |    R    |  I  |   I    |  A
+Code Review           |    R     |    R    |  C  |   I    |  A
+Testing               |    I     |    I    |  R  |   C    |  A
+Bug Fixing            |    R     |    R    |  C  |   I    |  A
+Deployment            |    I     |    I    |  C  |   R    |  A
+CI/CD Pipeline        |    I     |    I    |  C  |   R    |  A
+Documentation         |    R     |    R    |  C  |   C    |  A
+Monitoring            |    I     |    I    |  C  |   R    |  A
+
+------------------------------------------------------------
+
+Explanation:
+
+- Frontend & Backend: Responsible for development and bug fixing
+- QA Team: Responsible for testing and quality assurance
+- DevOps: Responsible for deployment, CI/CD, and monitoring
+- Project Manager (PM): Accountable for all activities
+
+------------------------------------------------------------
+
+Benefits of RACI Matrix:
+
+1. Clear Responsibilities:
+Everyone knows their role, reducing confusion.
+
+2. Better Coordination:
+Improves communication among teams.
+
+3. Accountability:
+Ensures one person is accountable for each task.
+
+4. Reduced Conflicts:
+Avoids duplication of work and misunderstandings.
+
+------------------------------------------------------------
+
+Conclusion:
+
+RACI Matrix helps manage multi-team projects efficiently by clearly defining roles and responsibilities, 
+ensuring smooth coordination and successful project execution.

@@ -1,0 +1,83 @@
+This project involves building a smart public transportation booking system with phased rollout (bus → train → metro), high scalability, reliability, and continuous user feedback. 
+To select the best SDLC model, we compare Waterfall and Incremental models.
+
+1. Waterfall Model:
+
+Definition:
+A linear and sequential model where each phase (requirement, design, development, testing) is completed before moving to the next.
+
+Advantages:
+- Clear structure and documentation
+- Easy to manage for fixed requirements
+
+Disadvantages in this project:
+- Low flexibility: Changes are difficult once development starts
+- Late feedback: User feedback comes only after full development
+- High risk: Errors detected late can impact entire system
+- Not suitable for phased rollout
+
+Conclusion:
+Waterfall is not suitable because this project requires continuous updates, feedback, and scalability.
+
+------------------------------------------------------------
+
+2. Incremental Model:
+
+Definition:
+The system is developed and delivered in small parts (increments), each adding new functionality.
+
+Advantages:
+- High flexibility: Changes can be made in each increment
+- Early delivery: Bus system can be launched first, followed by train and metro
+- Risk reduction: Issues are identified early in smaller modules
+- Continuous feedback: User feedback can be incorporated after each phase
+
+Disadvantages:
+- Requires good planning and architecture
+- Integration complexity may increase
+
+Conclusion:
+Incremental model fits well with phased rollout and evolving requirements.
+
+------------------------------------------------------------
+
+3. Recommendation:
+
+The most suitable approach is Incremental Model combined with Agile practices.
+
+Justification:
+
+1. Development Flexibility:
+Incremental + Agile allows continuous updates and feature additions.
+Each phase (bus, train, metro) can evolve independently.
+
+2. Risk Mitigation:
+Small increments reduce risk.
+If any issue occurs in bus module, it can be fixed before moving to train.
+
+3. User Feedback Incorporation:
+After launching bus system, feedback can be collected and improvements can be made in next increments.
+Example: Improve booking UI or ticket validation process.
+
+4. System Scalability and Reliability:
+System can be scaled gradually as new modules are added.
+Testing is done at each increment, ensuring reliability and minimal downtime.
+
+5. Cost-Effective Deployment:
+Phased deployment reduces initial cost and allows better resource utilization.
+
+------------------------------------------------------------
+
+Example Flow:
+
+Increment 1: Bus booking system (basic features)
+Increment 2: Add train booking + improve UI based on feedback
+Increment 3: Add metro system + advanced features (real-time updates, analytics)
+
+------------------------------------------------------------
+
+Conclusion:
+
+Incremental model with Agile practices is the best choice for this project.
+It provides flexibility, supports phased deployment, reduces risks, allows continuous feedback, 
+and ensures scalability and reliability of the system.

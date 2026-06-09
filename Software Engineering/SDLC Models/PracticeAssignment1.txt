@@ -1,0 +1,51 @@
+In this scenario, the project has fixed requirements, strict deadlines, and requires heavy documentation. 
+The most suitable SDLC model for such a project is the Waterfall Model.
+
+1. Justification for Waterfall Model:
+
+a) Fixed Requirements:
+In Waterfall, requirements are clearly defined at the beginning and remain stable throughout the project.
+This matches the scenario where requirements are already fixed.
+
+b) Strict Deadlines:
+Waterfall follows a structured and sequential approach, making it easier to plan timelines and meet deadlines.
+
+c) Heavy Documentation:
+Each phase (requirement, design, development, testing) is well documented.
+Government projects often require detailed reports and approvals, which Waterfall supports.
+
+d) Easy Management:
+Since each phase is completed before moving to the next, project tracking and management become simpler.
+
+e) Predictability:
+Waterfall provides clear milestones and deliverables, making the project predictable.
+
+------------------------------------------------------------
+
+2. Drawbacks if Agile Model is Used:
+
+a) Frequent Changes:
+Agile encourages continuous changes, but in government projects, requirements are fixed.
+This can create confusion and unnecessary modifications.
+
+b) Less Documentation:
+Agile focuses more on working software than documentation.
+This is not suitable for projects requiring detailed records and approvals.
+
+c) Difficulty in Compliance:
+Government projects often follow strict rules and standards.
+Agile's flexible nature may not align with these regulations.
+
+d) Uncertain Timelines:
+Agile works in iterations, making it harder to predict exact completion time.
+
+e) Client Involvement:
+Agile requires continuous client interaction.
+In government projects, frequent involvement may not always be possible.
+
+------------------------------------------------------------
+
+Conclusion:
+
+Waterfall model is the best choice for this project because it supports fixed requirements, strict deadlines, and heavy documentation. 
+Using Agile in such a scenario may lead to confusion, lack of documentation, and difficulty in meeting compliance requirements.

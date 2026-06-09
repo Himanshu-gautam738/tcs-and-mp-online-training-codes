@@ -1,0 +1,88 @@
+<!-- Personal Profile Page -> Create a simple personal profile page with basic HTML elements.
+Exercise: Build a webpage that includes:
+• A heading with your name
+• A short bio paragraph
+• An image (real or placeholder)
+• A list of hobbies
+Outcome:
+• Understands basic HTML structure (`<head>`, `<body>`)
+• Practices text formatting and image embedding
+• Learns simple CSS styling. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Profile - Rahul</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        text-align: center;
+    }
+
+    /* Container Styling */
+    .container {
+        background-color: white;
+        width: 600px;
+        margin: 60px auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px gray;
+    }
+
+    h1 {
+        color: #2c3e50;
+    }
+
+    img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 1px solid rgb(206, 204, 204);
+    }
+
+    .bio {
+        font-size: 16px;
+        color: #555;
+    }
+
+    ul {
+        list-style-type:none;
+        text-align: left;
+        padding: 0px;
+    }
+
+    li {
+        text-align: center;
+        margin: 5px 0;
+        /* background-color: rgb(224, 221, 221); */
+        /* border-radius: 5px; */
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Rahul Chaurasiya</h1>
+        <img src="/Web Technology/images/rahul-img2.jpg" alt="Profile Image">
+
+        <p class="bio">
+            Hello! My name is Rahul. I am a Computer Science student interested in Web Development,
+            Programming, and Database Management Systems. I enjoy learning new technologies and
+            building real-world projects.
+        </p>
+
+        <h2>My Hobbies</h2>
+        <ul>
+            <li>Coding</li>
+            <li>Reading Tech Articles</li>
+            <li>Playing Games</li>
+            <li>Learning New Technologies</li>
+        </ul>
+    </div>
+</body>
+</html>

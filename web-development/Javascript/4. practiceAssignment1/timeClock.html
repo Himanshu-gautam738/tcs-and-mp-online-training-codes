@@ -1,0 +1,167 @@
+<!-- Practice Assignment I -> UTC Time Clock - Draw a clock showing time according to the UTC time. It should be having
+3 hands – one for hour, one for minute and one for second.
+The clock displayed on screen should use the canvas and it should be
+flexible enough to change into different time zones. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Premium UTC Time Zone Clock</title>
+    <style>
+        body {
+            margin: 0;
+            height: 120vh;
+            background: radial-gradient(circle, #91aae2, #010929);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Segoe UI", sans-serif;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        canvas {
+            background: #081a68;
+            border-radius: 50%;
+            box-shadow: 0 0 40px rgba(3, 120, 255, 0.3);
+        }
+
+        select {
+            margin-top: 15px;
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .digital {
+            margin-top: 15px;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            color: #19fa00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Premium UTC Time Zone Clock</h2>
+        <canvas id="clock" width="400" height="400"></canvas>
+        <br>
+
+        <select id="timezone">
+            <option value="0">UTC</option>
+            <option value="5.5">IST (India)</option>
+            <option value="-5">EST (New York)</option>
+            <option value="1">CET (Europe)</option>
+            <option value="9">JST (Japan)</option>
+            <option value="10">AEST (Australia)</option>
+        </select>
+
+        <div class="digital" id="digitalTime">--:--:--</div>
+    </div>
+
+    <script>
+
+        /*  CANVAS SETUP */
+        const canvas = document.getElementById("clock");
+        const ctx = canvas.getContext("2d");
+        const radius = canvas.width / 2;
+
+        ctx.translate(radius, radius);
+
+        /* CLOCK FACE */
+        function drawFace() {
+            ctx.beginPath();
+            ctx.arc(0, 0, radius - 5, 0, Math.PI * 2);
+            ctx.fillStyle = "#020617";
+            ctx.fill();
+
+            ctx.strokeStyle = "#38bdf8";
+            ctx.lineWidth = 6;
+            ctx.stroke();
+
+            ctx.shadowBlur = 20;
+            ctx.shadowColor = "#38bdf8";
+        }
+
+        /*  TICKS */
+        function drawTicks() {
+            for (let i = 0; i < 60; i++) {
+                let angle = i * Math.PI / 30;
+                ctx.rotate(angle);
+                ctx.beginPath();
+                ctx.moveTo(0, -radius + 10);
+                ctx.lineTo(0, -radius + 20);
+                ctx.strokeStyle = i % 5 === 0 ? "#38bdf8" : "#475569";
+                ctx.lineWidth = i % 5 === 0 ? 4 : 2;
+                ctx.stroke();
+                ctx.rotate(-angle);
+            }
+        }
+
+        /* HAND FUNCTION*/
+        function drawHand(angle, length, width, color) {
+            ctx.beginPath();
+            ctx.lineWidth = width;
+            ctx.lineCap = "round";
+            ctx.strokeStyle = color;
+            ctx.moveTo(0, 0);
+            ctx.rotate(angle);
+            ctx.lineTo(0, -length);
+            ctx.stroke();
+            ctx.rotate(-angle);
+        }
+
+        /* TIME & TIMEZONE*/
+        function drawTime() {
+            const tz = parseFloat(
+                document.getElementById("timezone").value
+            );
+
+            const now = new Date();
+            const utc = now.getTime() + now.getTimezoneOffset() * 60000;
+            const local = new Date(utc + tz * 3600000);
+
+            let h = local.getHours();
+            let m = local.getMinutes();
+            let s = local.getSeconds();
+
+            // Digital clock
+            document.getElementById("digitalTime").innerHTML =
+                String(h).padStart(2, "0") + ":" +
+                String(m).padStart(2, "0") + ":" +
+                String(s).padStart(2, "0");
+
+            // Hour
+            h = h % 12;
+            const hourAngle = h * Math.PI / 6 + m * Math.PI / (6 * 60);
+            drawHand(hourAngle, radius * 0.5, 6, "#e5e7eb");
+
+            // Minute
+            const minuteAngle = m * Math.PI / 30 + s * Math.PI / (30 * 60);
+            drawHand(minuteAngle, radius * 0.7, 4, "#38bdf8");
+
+            // Second (smooth)
+            const secondAngle = (s + now.getMilliseconds() / 1000) * Math.PI / 30;
+            drawHand(secondAngle, radius * 0.8, 2, "#ef4444");
+        }
+
+        /* MAIN LOOP */
+        function animate() {
+            ctx.clearRect(-radius, -radius, canvas.width, canvas.height);
+            drawFace();
+            drawTicks();
+            drawTime();
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html>

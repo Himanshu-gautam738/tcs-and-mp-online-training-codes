@@ -1,0 +1,236 @@
+<!-- Interactive Quiz -> Creating an interactive quiz is a great way to test knowledge and engage users. This case study outlines a structured approach for developing a simple interactive quiz using JavaScript.
+Tasks
+Task 1: Quiz Questions (JavaScript Implementation)
+Create an array to store quiz questions. Each question should contain:
+• Question Text (String)
+• Options (Array of strings)
+• Correct Answer (String)
+Operations to Implement:
+• Store quiz questions in an array.
+• Display quiz questions to the user. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Professional Quiz App</title>
+    <style>
+        body
+        {
+            margin: 0;
+            font-family: "Segoe UI";
+            background: linear-gradient(135deg, #085240, #7aefa9);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quiz-box {
+            background: white;
+            width: 550px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .timer {
+            color: red;
+            font-weight: bold;
+        }
+
+        .progress {
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #2563eb;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .option {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            background: #f1f5f9;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            background: #dbeafe;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background: #2563eb;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .result {
+            text-align: center;
+            font-size: 22px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="quiz-box">
+        <div class="header">
+            <div id="questionNumber">Question 1</div>
+            <div class="timer" id="timer">Time: 30</div>
+        </div>
+
+        <div class="progress">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <h3 id="question">Question here</h3>
+        <div id="options"></div>
+        <button onclick="nextQuestion()">Next</button>
+        <div class="result" id="result"></div>
+
+        <button onclick="restartQuiz()" id="restartBtn" style="display:none;">Restart Quiz</button>
+    </div>
+
+    <script>
+        /* QUESTIONS ARRAY */
+        const quiz = [
+            {
+                q: "Which language runs in browser?",
+                options: ["Python", "Java", "JavaScript", "C"],
+                answer: "JavaScript"
+            },
+
+            {
+                q: "Which is styling language?",
+                options: ["HTML", "CSS", "Java", "Python"],
+                answer: "CSS"
+            },
+
+            {
+                q: "Which is database?",
+                options: ["MySQL", "HTML", "CSS", "JS"],
+                answer: "MySQL"
+            },
+
+            {
+                q: "Which is backend language?",
+                options: ["Node.js", "HTML", "CSS", "Bootstrap"],
+                answer: "Node.js"
+            }
+        ];
+
+        /* VARIABLES */
+        let index = 0;
+        let score = 0;
+        let time = 30;
+        let timer;
+
+        /* LOAD QUESTION */
+        function loadQuestion() {
+            clearInterval(timer);
+            time = 30;
+            startTimer();
+
+            document.getElementById("questionNumber").innerHTML = `Question ${index + 1}/${quiz.length}`;
+            document.getElementById("question").innerHTML = quiz[index].q;
+
+            let html = "";
+            quiz[index].options.forEach(opt => {
+                html += `<label class="option"> <input type="radio" name="ans" value="${opt}"> ${opt} </label> `;
+            });
+
+            document.getElementById("options").innerHTML = html;
+            updateProgress();
+        }
+
+        /* TIMER */
+        function startTimer() {
+            timer = setInterval(() => {
+                document.getElementById("timer").innerHTML = "Time: " + time;
+                time--;
+
+                if (time < 0) {
+                    nextQuestion();
+                }
+            }, 1000);
+        }
+
+        /* NEXT QUESTION */
+        function nextQuestion() {
+            const selected = document.querySelector('input[name="ans"]:checked');
+
+            if (selected &&
+                selected.value === quiz[index].answer) {
+                score++;
+            }
+            index++;
+
+            if (index < quiz.length) {
+                loadQuestion();
+            }
+            else {
+                showResult();
+            }
+        }
+
+        /* SHOW RESULT */
+        function showResult() {
+            clearInterval(timer);
+
+            let feedback;
+            if (score === quiz.length)
+                feedback = "Excellent!";
+            else if (score >= quiz.length / 2)
+                feedback = "Good Job!";
+            else
+                feedback = "Keep Practicing!";
+            document.getElementById("question").innerHTML = "Quiz Completed";
+            document.getElementById("options").innerHTML = "";
+            document.getElementById("result").innerHTML = `Score: ${score}/${quiz.length}<br>${feedback}`;
+            document.getElementById("restartBtn").style.display = "block";
+        }
+
+        /* PROGRESS BAR */
+        function updateProgress() {
+            let percent = (index / quiz.length) * 100;
+            document.getElementById("progressBar").style.width = percent + "%";
+        }
+
+        /* RESTART */
+        function restartQuiz() {
+            index = 0;
+            score = 0;
+            loadQuestion();
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("restartBtn").style.display = "none";
+        }
+
+        /* START */
+        loadQuestion();
+    </script>
+</body>
+</html>

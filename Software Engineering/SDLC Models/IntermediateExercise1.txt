@@ -1,0 +1,41 @@
+Agile and Waterfall are two popular software development models with different approaches.
+
+1. Flexibility to Changes:
+- Agile:
+Highly flexible. Changes can be easily incorporated at any stage of development.
+Example: If a client wants new features in a mobile app, Agile allows adding them in the next sprint.
+
+- Waterfall:
+Rigid model. Changes are difficult once a phase is completed.
+Example: If requirements change after design phase, it is costly and time-consuming to modify.
+
+2. Handling of Project Risks:
+- Agile:
+Risks are handled continuously through iterative development and regular feedback.
+Problems are identified early in small increments.
+
+- Waterfall:
+Risks are identified late because testing is done after development.
+If a major issue occurs, it affects the entire project.
+
+3. Approach to Documentation:
+- Agile:
+Less documentation. Focus is on working software and customer collaboration.
+
+- Waterfall:
+Heavy documentation. Each phase is documented in detail before moving to the next.
+
+Suitable Project Types:
+
+Agile:
+- Projects with changing requirements
+- Web applications, mobile apps, startups
+Example: Social media app, e-commerce platform
+
+Waterfall:
+- Projects with fixed and well-defined requirements
+- Government or banking systems
+Example: Payroll system, banking software
+
+Conclusion:
+Agile is suitable for dynamic and evolving projects, while Waterfall is best for stable and well-defined projects.

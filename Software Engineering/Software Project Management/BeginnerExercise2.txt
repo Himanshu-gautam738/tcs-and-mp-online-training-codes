@@ -1,0 +1,22 @@
+The critical path is the sequence of tasks that determines the minimum project duration. 
+If it changes during execution, it can impact the project timeline.
+
+Possible Causes:
+
+1. Delay in critical tasks
+2. Resource unavailability
+3. Changes in project scope
+4. Incorrect time estimation
+5. Dependency changes between tasks
+
+Project Manager’s Response:
+
+1. Recalculate the critical path using updated data.
+2. Allocate additional resources to speed up delayed tasks.
+3. Adjust the project schedule and deadlines if necessary.
+4. Communicate changes clearly to all stakeholders.
+5. Use techniques like crashing (adding resources) or fast-tracking (parallel execution).
+6. Monitor the project closely to prevent further delays.
+
+Conclusion:
+A project manager must quickly analyze and respond to changes in the critical path to keep the project on track.

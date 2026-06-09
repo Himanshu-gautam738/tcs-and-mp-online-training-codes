@@ -1,0 +1,51 @@
+In traditional software development, testing is often performed only after the entire system is developed. 
+However, this approach is insufficient, especially for complex systems like a School Management System (SMS).
+
+Problems with Post-Development Testing:
+
+1. Late Detection of Errors:
+If errors are found only after full development, it becomes difficult and costly to fix them.
+Example: If the fee payment module has calculation errors, fixing it may require changes in multiple parts of the system.
+
+2. High Rework Cost:
+Fixing issues late in development requires redesign, recoding, and retesting, which increases cost and effort.
+
+3. Integration Issues:
+Modules like admission, attendance, and grading must work together.
+If integration problems are found late, it becomes complex to resolve dependencies.
+
+4. Reduced Customer Satisfaction:
+Late delivery and buggy systems reduce user trust and satisfaction.
+
+5. Risk of System Failure:
+Critical modules (e.g., exam grading or payments) may fail if not tested early.
+
+Embedding Testing in Each Phase of SDLC:
+
+1. Requirement Phase:
+- Perform requirement validation and reviews.
+- Example: Ensure attendance rules and grading criteria are clearly defined.
+
+2. Design Phase:
+- Conduct design reviews and verification.
+- Example: Validate database design for student records and fee structure.
+
+3. Development Phase:
+- Perform unit testing for each module.
+- Example: Test admission form validation and fee calculation logic separately.
+
+4. Integration Phase:
+- Conduct integration testing.
+- Example: Ensure attendance data correctly affects grading and reports.
+
+5. System Testing:
+- Test the complete system.
+- Example: Simulate real scenarios like student admission to result generation.
+
+6. Acceptance Testing:
+- Validate with users.
+- Example: School staff tests whether the system meets their needs.
+
+Conclusion:
+Testing should be integrated throughout the SDLC rather than performed only at the end. 
+Early testing helps detect errors sooner, reduces cost, improves reliability, and ensures high-quality software.
