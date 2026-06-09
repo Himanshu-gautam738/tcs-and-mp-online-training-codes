@@ -1,1 +1,0 @@
-# tcs-and-mp-online-training-codes
